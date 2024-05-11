@@ -72,7 +72,7 @@ const Contact = (artistId) => {
 				<meta property='og:image' content='http://localhost:3000/logo.png' />
 			</Head>
 			<div className={styles.contenaire}>
-				<h1 className={styles.h1}>Nous sommes là pour vous aider ! Contactez-nous aujourd'hui.</h1>
+				<h1 className={styles.h1}>Nous sommes là pour vous aider ! Contactez-nous aujourd&apos;hui.</h1>
 				<div className={styles.flexContenu}>
 					<div className={styles.photo}>
 						{artist ? (
