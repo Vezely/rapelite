@@ -1,6 +1,5 @@
 {
   "/_not-found": "app/_not-found.js",
-  "/admin/page": "app/admin/page.js",
   "/api/contact/[artistId]/route": "app/api/contact/[artistId]/route.js",
   "/api/envoyerMessage/[artistName]/route": "app/api/envoyerMessage/[artistName]/route.js",
   "/api/events/[eventId]/route": "app/api/events/[eventId]/route.js",
@@ -10,6 +9,7 @@
   "/contact/[artistId]/page": "app/contact/[artistId]/page.js",
   "/events/[eventId]/page": "app/events/[eventId]/page.js",
   "/events/page": "app/events/page.js",
-  "/favicon.ico/route": "app/favicon.ico/route.js",
-  "/page": "app/page.js"
+  "/admin/page": "app/admin/page.js",
+  "/page": "app/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js"
 }
