@@ -1,0 +1,18 @@
+.container {
+	background-color: var(--bgHeaderFooter);
+	border-bottom: 1px solid #b6b5b5;
+	border-top: 1px solid #b6b5b5;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 8px 20px;
+	height: 75px;
+	position: sticky;
+	top: 0;
+	z-index: 2;
+}
+.container .logo {
+	font-size: 1.8rem;
+	font-weight: bold;
+	color: #fff;
+}

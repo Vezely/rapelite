@@ -1,0 +1,146 @@
+.maske {
+	position: fixed;
+	background: rgb(0 0 0 / 48%);
+	backdrop-filter: blur(1px);
+	z-index: 3;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 110vw;
+	height: 100vh;
+	overflow: hidden;
+}
+.viewContainer {
+	position: fixed;
+	z-index: 3;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 80%;
+	background: var(--couleurFond);
+	color: var(--text);
+	border-radius: 8px;
+	padding: 2rem;
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	animation: hauterAnim 0.3s linear;
+}
+
+@keyframes hauterAnim {
+	0% {
+		transform: translate(-50%, -50%) scale(0);
+	}
+
+	100% {
+		transform: translate(-50%, -50%) scale(1);
+	}
+}
+.viewContainer > span {
+	margin-top: 1rem;
+}
+
+.close {
+	position: absolute;
+	top: -5px;
+	right: -5px;
+	z-index: 5;
+	fill: var(--bg);
+	background-color: #171717d6;
+	cursor: pointer;
+	backdrop-filter: blur(10px);
+	width: 16px;
+	height: 16px;
+	padding: 2.2px;
+	border-radius: 50%;
+}
+.close:hover {
+	transform: scale(1.09);
+}
+.flex {
+	display: flex;
+	gap: 10px;
+}
+.flex .gauche {
+	width: 60%;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+.flex .droite {
+	width: 40%;
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-between;
+	flex-direction: column;
+	gap: 10px;
+}
+.flex .droite span {
+	width: 100%;
+
+	font-weight: 500;
+	font-size: 1.2em;
+}
+.flex .droite .description {
+	width: 100%;
+	display: flex;
+	gap: 0.8rem;
+	flex-direction: column;
+}
+.flex .droite p {
+	font-size: 1.1em;
+}
+.flex .gauche .photo {
+	width: 100%;
+	border-radius: 8px;
+	overflow: hidden;
+}
+.flex .gauche .photo img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+.place {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	gap: 3px;
+}
+.place svg {
+	width: 25px;
+	height: 25px;
+}
+.action {
+	display: flex;
+	/* flex-wrap: wrap; */
+	width: 100%;
+	justify-content: space-between;
+}
+.action button {
+	padding: 7px 20px;
+	cursor: pointer;
+	border: none;
+	border-radius: 8px;
+	background-color: var(--text);
+	color: var(--couleurFond);
+}
+.action button:hover {
+	opacity: 0.8;
+}
+@media (max-width: 720px) {
+	.viewContainer {
+		font-size: 0.9em;
+	}
+}
+@media (max-width: 550px) {
+	.flex {
+		flex-wrap: wrap;
+	}
+	.flex .gauche,
+	.flex .droite {
+		width: 100%;
+	}
+	.viewContainer {
+		padding: 0.8rem;
+	}
+}

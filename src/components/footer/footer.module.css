@@ -1,0 +1,9 @@
+.footer {
+	background-color: var(--bgHeaderFooter);
+	color: var(--textUni);
+	text-align: center;
+	padding: 20px;
+	margin-top: 3rem;
+	border-top: 1px solid #b6b5b5;
+	border-bottom: 1px solid #b6b5b5;
+}

@@ -1,0 +1,156 @@
+.container {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	padding-right: 5px;
+}
+
+.links a,
+.mobileLinks a {
+	padding: 8px 20px;
+	border-radius: 8px;
+	color: var(--textUni);
+}
+
+.active {
+	background-color: var(--textUni);
+}
+.links .active {
+	color: #212121;
+}
+.menuButton,
+.mobileLinks {
+	display: none;
+	fill: white;
+}
+
+.linkContainer {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+.logo {
+	font-size: 2rem;
+	font-weight: 700;
+}
+/* Genel stil */
+.toggle_switch {
+	position: relative;
+	display: inline-block;
+	width: 40px;
+	height: 24px;
+	/* margin: 10px; */
+}
+
+/* Giriş stil */
+.toggle_switch .toggle_input {
+	display: none;
+}
+
+/* Anahtarın stilinin etrafındaki etiketin stil */
+.toggle_switch .toggle_label {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 40px;
+	height: 24px;
+	background-color: var(--textUni);
+	border-radius: 34px;
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+.toggle_switch .toggle_label:hover::after {
+	font-size: 0.9em;
+	position: absolute;
+	text-wrap: nowrap;
+	left: 50%;
+	top: 2.5rem;
+	padding: 3px 8px;
+	border-radius: 5px;
+	transform: translate(-50%, -50%);
+	background-color: var(--couleurFond);
+	color: var(--text);
+}
+.toggle_switch .toggle_label[data_theme='Lumière']:hover::after {
+	content: 'Lumière';
+}
+.toggle_switch .toggle_label[data_theme='Sombre']:hover::after {
+	content: 'Sombre';
+}
+.toggle_switch .toggle_label::before {
+	content: '';
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	top: 2px;
+	left: 2px;
+	background-color: var(--btn);
+	box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.3);
+	transition: transform 0.3s;
+}
+
+/* .toggle_switch .toggle_input:checked + .toggle_label {
+	background-color: var(--couleurFond);
+} */
+
+.toggle_switch .toggle_input:checked + .toggle_label::before {
+	transform: translateX(16px);
+}
+
+/* Light tema */
+.toggle_switch.light .toggle_label {
+	background-color: #bebebe;
+}
+
+.toggle_switch.light .toggle_input:checked + .toggle_label {
+	background-color: #9b9b9b;
+}
+
+.toggle_switch.light .toggle_input:checked + .toggle_label::before {
+	transform: translateX(6px);
+}
+
+/* Dark tema */
+.toggle_switch.dark .toggle_label {
+	background-color: #4b4b4b;
+}
+
+.toggle_switch.dark .toggle_input:checked + .toggle_label {
+	background-color: #717171;
+}
+
+.toggle_switch.dark .toggle_input:checked + .toggle_label::before {
+	transform: translateX(16px);
+}
+
+@media (max-width: 768px) {
+	.links {
+		display: none;
+	}
+
+	.menuButton {
+		display: block;
+		cursor: pointer;
+		margin-right: -5px;
+	}
+
+	.mobileLinks {
+		position: absolute;
+		top: 92px;
+		right: 0;
+		background-color: var(--bgHeaderFooter);
+		padding: 1rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		color: var(--textUni);
+		border-bottom-left-radius: 10px;
+		border-bottom-right-radius: 10px;
+		gap: 30px;
+		z-index: 2;
+	}
+	.mobileLinks .active {
+		color: #212121;
+	}
+}

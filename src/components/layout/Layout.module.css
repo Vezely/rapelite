@@ -1,0 +1,33 @@
+.layout[data-theme='Lumière'] {
+	--couleurFond: #e8e8e8;
+	--couleurFondCart: #d4d4d4;
+	--bg: #f5f1f1;
+	--bgHeaderFooter: #212121;
+	--bgSoft: #eaeaea;
+	--text: #1e1d1d;
+	--textUni: #fff;
+	--couleurBtn: #1b1d20;
+	--bgNavbar: #3901be;
+	--textSoft: #777777;
+	--btn: #8851f6;
+	--btnOver: #641cf5;
+}
+
+.layout[data-theme='Sombre'] {
+	--couleurFond: #212121;
+	--couleurFondCart: #353434;
+	--bg: #f5f1f1;
+	--bgHeaderFooter: #1b1b1b;
+	--textUni: #fff;
+	--bgSoft: #eaeaea;
+	--text: #f5f1f1;
+	--couleurBtn: #f5f1f1;
+
+	--bgNavbar: #3901be;
+	--textSoft: #777777;
+	--btn: #8851f6;
+	--btnOver: #641cf5;
+}
+.layout {
+	background-color: var(--couleurFond);
+}
